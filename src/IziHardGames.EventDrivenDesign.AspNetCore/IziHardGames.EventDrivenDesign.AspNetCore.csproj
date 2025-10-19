@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>IziHardGames.EventDrivenDesign.AspNetCore</RootNamespace>
+    <ProjectGuid>2c243be3-33c2-471c-907c-3fe69c770ead</ProjectGuid>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageDescription>AspNetCore</PackageDescription>
+    <PackageId>IziHardGames.EventDrivenDesign.AspNetCore</PackageId>
+    <PackageTags>Async;DDD;EDD;AspNetCore</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGetizer">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.AsyncCommunication" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+</Project>
