@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
     <PackageDescription>AspNetCore</PackageDescription>
     <PackageId>IziHardGames.EventDrivenDesign.AspNetCore</PackageId>
     <PackageTags>Async;DDD;EDD;AspNetCore</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.1</Version>
+    <Version>0.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="IziHardGames.AsyncCommunication" PrivateAssets="all" />
+    <PackageReference Include="IziHardGames.EventDrivenDesign" PrivateAssets="all" />
+    <!--<PackageReference Include="IziHardGames.AsyncCommunication" PrivateAssets="all" />-->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
   </ItemGroup>
 
   <ItemGroup>

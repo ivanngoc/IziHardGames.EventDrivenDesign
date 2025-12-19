@@ -1,9 +1,10 @@
-﻿using IziHardGames.AsyncCommunication.Application.Models;
-using IziHardGames.AsyncCommunication.Contracts.EventDrivenDesign;
+﻿using IziHardGames.EventDrivenDesign.Abstractions;
+using IziHardGames.EventDrivenDesign.Application;
+using IziHardGames.EventDrivenDesign.Application.Metas;
 using IziHardGames.EventDrivenDesign.AspNetCore.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using static IziHardGames.AsyncCommunication.Application.Models.EventsMap;
-using static IziHardGames.AsyncCommunication.Application.Models.EventsMap.ConsumptionGroup;
+using static IziHardGames.EventDrivenDesign.Application.EventsMap;
+using static IziHardGames.EventDrivenDesign.Application.EventsMap.ConsumptionGroup;
 
 namespace IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers
 {
@@ -38,7 +39,7 @@ namespace IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers
             {
                 if (typeof(IConsumer).IsAssignableFrom(iface))
                 {
-                    if (iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IConsumer<>))
+                    if (iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IConsumerAsync<>))
                     {
                         var eventType = iface.GetGenericArguments().First();
                         yield return new ConsumerMetaT1(new ConsumerMeta(actualType, eventType, iface), declaredType);

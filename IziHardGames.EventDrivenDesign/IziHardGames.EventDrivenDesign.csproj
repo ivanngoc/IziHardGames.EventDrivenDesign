@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>IziHardGames.EventDrivenDesign</RootNamespace>
+    <ProjectGuid>ab5a0254-8116-4026-8b32-11ad9f21b935</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IziHardGames.EventDrivenDesign.Abstractions"></PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"></PackageReference>
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+    <PackageId>IziHardGames.EventDrivenDesign</PackageId>
+    <PackageTags>DDD;EDD;Abstractions;SubPub;</PackageTags>
+    <Version>0.0.3</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGetizer">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="PolySharp">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
