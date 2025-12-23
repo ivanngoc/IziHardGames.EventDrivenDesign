@@ -1,11 +1,11 @@
-﻿using IziHardGames.EventDrivenDesign.Abstractions;
-using IziHardGames.EventDrivenDesign.Application;
-using IziHardGames.EventDrivenDesign.AspNetCore.Application;
-using IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace IziHardGames.EventDrivenDesign.AspNetCore.Extensions
+﻿namespace IziHardGames.EventDrivenDesign.AspNetCore.Extensions
 {
+    using IziHardGames.EventDrivenDesign.Abstractions;
+    using IziHardGames.EventDrivenDesign.Application;
+    using IziHardGames.EventDrivenDesign.AspNetCore.Application;
+    using IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers;
+    using Microsoft.Extensions.DependencyInjection;
+
     public static class IServiceCollectionExtensions
     {
         public static IServiceCollection AddIziInMemoryMessaging(this IServiceCollection services)

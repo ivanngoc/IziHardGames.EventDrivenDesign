@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace IziHardGames.EventDrivenDesign.Abstractions.Metas
+﻿namespace IziHardGames.EventDrivenDesign.Abstractions.Metas
 {
+    using System;
+
     public interface IConsumerMeta
     {
         Type ImplementationType { get; }

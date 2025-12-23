@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using IziHardGames.EventDrivenDesign.Abstractions;
-using IziHardGames.EventDrivenDesign.Application.Metas;
-
-namespace IziHardGames.EventDrivenDesign.Application
+﻿namespace IziHardGames.EventDrivenDesign.Application
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using IziHardGames.EventDrivenDesign.Abstractions;
+    using IziHardGames.EventDrivenDesign.Application.Metas;
+
     public static class ReflectionHelper
     {
         public static Eble GetConsumerMetasEnumerable<T>()

@@ -1,7 +1,7 @@
-﻿using IziHardGames.EventDrivenDesign.Abstractions;
-
-namespace IziHardGames.EventDrivenDesign.AspNetCore.Application
+﻿namespace IziHardGames.EventDrivenDesign.AspNetCore.Application
 {
+    using IziHardGames.EventDrivenDesign.Abstractions;
+
     public class Publisher(IRouterAsync router) : IPublisherAsync
     {
         public Task PublishAsync<TMsg>(TMsg msg, CancellationToken ct = default)

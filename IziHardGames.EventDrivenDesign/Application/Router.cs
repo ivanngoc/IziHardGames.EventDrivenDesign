@@ -1,9 +1,9 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using IziHardGames.EventDrivenDesign.Abstractions;
-
-namespace IziHardGames.EventDrivenDesign.Application
+﻿namespace IziHardGames.EventDrivenDesign.Application
 {
+    using System.Threading;
+    using System.Threading.Tasks;
+    using IziHardGames.EventDrivenDesign.Abstractions;
+
     public class Router(EventsMap eventMap) : IRouterAsync
     {
         public Task RouteAsync<TEvent>(TEvent e, CancellationToken ct = default)

@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-using static IziHardGames.EventDrivenDesign.Application.EventsMap;
-using F = System.Func<object, System.Threading.Tasks.Task>;
-
-namespace IziHardGames.EventDrivenDesign.Application
+﻿namespace IziHardGames.EventDrivenDesign.Application
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Threading.Tasks;
     using IziHardGames.EventDrivenDesign.Abstractions;
     using IziHardGames.EventDrivenDesign.Application.Metas;
+    using static IziHardGames.EventDrivenDesign.Application.EventsMap;
+    using F = System.Func<object, System.Threading.Tasks.Task>;
 
     public class EventsMap : Dictionary<Type, ConsumptionGroup>
     {

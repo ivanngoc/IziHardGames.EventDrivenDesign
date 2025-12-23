@@ -1,13 +1,13 @@
-﻿using IziHardGames.EventDrivenDesign.Abstractions;
-using IziHardGames.EventDrivenDesign.Application;
-using IziHardGames.EventDrivenDesign.Application.Metas;
-using IziHardGames.EventDrivenDesign.AspNetCore.Extensions;
-using Microsoft.Extensions.DependencyInjection;
-using static IziHardGames.EventDrivenDesign.Application.EventsMap;
-using static IziHardGames.EventDrivenDesign.Application.EventsMap.ConsumptionGroup;
-
-namespace IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers
+﻿namespace IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers
 {
+    using IziHardGames.EventDrivenDesign.Abstractions;
+    using IziHardGames.EventDrivenDesign.Application;
+    using IziHardGames.EventDrivenDesign.Application.Metas;
+    using IziHardGames.EventDrivenDesign.AspNetCore.Extensions;
+    using Microsoft.Extensions.DependencyInjection;
+    using static IziHardGames.EventDrivenDesign.Application.EventsMap;
+    using static IziHardGames.EventDrivenDesign.Application.EventsMap.ConsumptionGroup;
+
     public class DIReflectionHelper
     {
         public static EventsMap GetEventMap(IServiceProvider services)

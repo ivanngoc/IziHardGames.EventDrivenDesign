@@ -1,10 +1,10 @@
-﻿using IziHardGames.EventDrivenDesign.Abstractions;
-using IziHardGames.EventDrivenDesign.Application;
-using IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace IziHardGames.EventDrivenDesign.UnitTests
+﻿namespace IziHardGames.EventDrivenDesign.UnitTests
 {
+    using IziHardGames.EventDrivenDesign.Abstractions;
+    using IziHardGames.EventDrivenDesign.Application;
+    using IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers;
+    using Microsoft.Extensions.DependencyInjection;
+
     public class ReflectionHelper_UnitTest
     {
 

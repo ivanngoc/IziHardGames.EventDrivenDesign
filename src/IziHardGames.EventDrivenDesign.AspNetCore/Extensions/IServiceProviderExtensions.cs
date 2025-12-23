@@ -1,8 +1,8 @@
-﻿using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace IziHardGames.EventDrivenDesign.AspNetCore.Extensions
+﻿namespace IziHardGames.EventDrivenDesign.AspNetCore.Extensions
 {
+    using System.Reflection;
+    using Microsoft.Extensions.DependencyInjection;
+
     public static class IServiceProviderExtensions
     {
         public static ServiceDescriptor[]? GetDescriptors(this IServiceCollection services)

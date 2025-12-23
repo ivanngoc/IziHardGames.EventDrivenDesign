@@ -1,8 +1,8 @@
-﻿using System;
-using IziHardGames.EventDrivenDesign.Abstractions.Metas;
-
-namespace IziHardGames.EventDrivenDesign.Application.Metas
+﻿namespace IziHardGames.EventDrivenDesign.Application.Metas
 {
+    using System;
+    using IziHardGames.EventDrivenDesign.Abstractions.Metas;
+
     public class ConsumerMeta : IConsumerMeta
     {
         public Type ImplementationType { get; private set; }
