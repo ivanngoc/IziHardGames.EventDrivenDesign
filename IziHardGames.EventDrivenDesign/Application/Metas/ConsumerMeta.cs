@@ -1,17 +1,18 @@
 ﻿using System;
+using IziHardGames.EventDrivenDesign.Abstractions.Metas;
 
 namespace IziHardGames.EventDrivenDesign.Application.Metas
 {
-    public class ConsumerMeta
+    public class ConsumerMeta : IConsumerMeta
     {
-        public Type ActulaType { get; private set; }
+        public Type ImplementationType { get; private set; }
         public Type EventType { get; private set; }
-        public Type IFace { get; private set; }
+        public Type IFaceType { get; private set; }
         public ConsumerMeta(Type actulaType, Type eventType, Type iface)
         {
-            ActulaType = actulaType;
+            ImplementationType = actulaType;
             EventType = eventType;
-            IFace = iface;
+            IFaceType = iface;
         }
     }
 }

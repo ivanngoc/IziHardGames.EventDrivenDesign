@@ -12,10 +12,18 @@ namespace IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers
     {
         public static EventsMap GetEventMap(IServiceProvider services)
         {
-            var metas = GetConsumerMetas(services);
-            var pairs = GetPairs(metas, services);
-            var result = new EventsMap(metas, pairs);
-            return result;
+            var container = services.GetService<IServiceCollection>();
+            if (container is not null)
+            {
+                throw new NotImplementedException();
+            }
+            else
+            {
+                var metas = GetConsumerMetas(services);
+                var pairs = GetPairs(metas, services);
+                var result = new EventsMap(metas, pairs);
+                return result;
+            }
         }
 
         public static ConsumerMetaT1[] GetConsumerMetas(IServiceProvider provider)
@@ -27,6 +35,11 @@ namespace IziHardGames.EventDrivenDesign.AspNetCore.Application.Helpers
             }
             var metas = descr.SelectMany(x => ExtractMetas(x)).ToArray();
             return metas;
+        }
+
+        private static IEnumerable<ConsumerMetaT1> ExtractMetas(IServiceCollection services)
+        {
+            throw new NotImplementedException();
         }
 
         private static IEnumerable<ConsumerMetaT1> ExtractMetas(ServiceDescriptor descriptor)

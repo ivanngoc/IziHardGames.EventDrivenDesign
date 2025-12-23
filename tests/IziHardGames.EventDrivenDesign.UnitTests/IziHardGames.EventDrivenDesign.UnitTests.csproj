@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\dist\IziHardGames.EventDrivenDesign.Abstractions\IziHardGames.EventDrivenDesign.Abstractions.csproj" />
     <ProjectReference Include="..\..\IziHardGames.EventDrivenDesign\IziHardGames.EventDrivenDesign.csproj" />
+    <ProjectReference Include="..\..\src\IziHardGames.EventDrivenDesign.AspNetCore\IziHardGames.EventDrivenDesign.AspNetCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

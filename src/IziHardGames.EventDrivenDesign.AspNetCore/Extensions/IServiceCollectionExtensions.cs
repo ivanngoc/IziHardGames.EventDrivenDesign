@@ -10,6 +10,10 @@ namespace IziHardGames.EventDrivenDesign.AspNetCore.Extensions
     {
         public static IServiceCollection AddIziInMemoryMessaging(this IServiceCollection services)
         {
+            if (!services.Any(x => x.ServiceType == typeof(IServiceCollection)))
+            {
+                services.AddSingleton(services);
+            }
             services.AddSingleton(x => DIReflectionHelper.GetEventMap(x));
             services.AddSingleton<IRouterAsync, Router>();
             services.AddSingleton<IPublisherAsync, Publisher>();

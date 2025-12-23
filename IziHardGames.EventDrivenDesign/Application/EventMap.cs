@@ -44,7 +44,7 @@ namespace IziHardGames.EventDrivenDesign.Application
                 var paramE = Expression.Parameter(typeof(object), "e");
                 var paramFunc = Expression.Parameter(typeof(F), "arg");
                 var method = typeof(ConsumptionGroup).GetMethod(nameof(ConsumeGenAsync), System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
-                var genericMethod = method!.MakeGenericMethod(consumer.meta.ActulaType, consumer.meta.EventType);
+                var genericMethod = method!.MakeGenericMethod(consumer.meta.ImplementationType, consumer.meta.EventType);
                 var call = Expression.Call(genericMethod, paramE, Expression.Constant(getTargetFunc));
                 var lambda = Expression.Lambda<F>(call, paramE);
                 var f = lambda.Compile();

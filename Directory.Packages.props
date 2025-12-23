@@ -7,8 +7,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="IziHardGames.AsyncCommunication" Version="0.0.21" />
-    <PackageVersion Include="IziHardGames.EventDrivenDesign.Abstractions" Version="0.0.4" />
-    <PackageVersion Include="IziHardGames.EventDrivenDesign" Version="0.0.3" />
+    <PackageVersion Include="IziHardGames.EventDrivenDesign.Abstractions" Version="0.0.5" />
+    <PackageVersion Include="IziHardGames.EventDrivenDesign" Version="0.0.4" />
     
     
     <PackageVersion Include="Scalar.AspNetCore" Version="2.5.6" />

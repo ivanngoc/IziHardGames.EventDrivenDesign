@@ -9,6 +9,11 @@ namespace IziHardGames.EventDrivenDesign.Application
 {
     public static class ReflectionHelper
     {
+        public static Eble GetConsumerMetasEnumerable<T>()
+        {
+            throw new NotImplementedException();
+        }
+
         public static Eble GetConsumerMetasEnumerable(Assembly assembly)
         {
             return new Eble(assembly.GetTypes());

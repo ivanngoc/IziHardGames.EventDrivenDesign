@@ -5,7 +5,7 @@
 
     }
 
-    public interface IConsumer<T>: IConsumer
+    public interface IConsumer<T> : IConsumer
     {
         void Consume(T e);
     }

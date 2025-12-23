@@ -17,7 +17,7 @@
     <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
     <PackageId>IziHardGames.EventDrivenDesign</PackageId>
     <PackageTags>DDD;EDD;Abstractions;SubPub;</PackageTags>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿namespace IziHardGames.EventDrivenDesign.Abstractions
 {
-    public interface IRouter
+    public interface IDescriptor
     {
 
     }
