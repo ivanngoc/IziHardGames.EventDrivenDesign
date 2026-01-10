@@ -4,14 +4,24 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
+    using System.Threading.Tasks;
     using IziHardGames.EventDrivenDesign.Abstractions;
+    using IziHardGames.EventDrivenDesign.Abstractions.Metas;
     using IziHardGames.EventDrivenDesign.Application.Metas;
+    using Microsoft.Extensions.DependencyInjection;
 
     public static class ReflectionHelper
     {
-        public static Eble GetConsumerMetasEnumerable<T>()
+        public static Func<TParam, Task> CreateConsumerAsyncDelegate<TMeta, TParam>(object target, TMeta meta) where TMeta : IConsumerMetaDI
         {
             throw new NotImplementedException();
+        }
+
+        public static Eble GetConsumerMetasEnumerable(IServiceCollection services)
+        {
+            var q = services.Where(x => x.Lifetime == ServiceLifetime.Singleton);
+            var q2 = q.Select(x => x.ImplementationType ?? x.ServiceType);
+            return GetConsumerMetasEnumerable(q2);
         }
 
         public static Eble GetConsumerMetasEnumerable(Assembly assembly)

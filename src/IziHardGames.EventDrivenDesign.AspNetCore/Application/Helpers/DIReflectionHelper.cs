@@ -12,18 +12,37 @@
     {
         public static EventsMap GetEventMap(IServiceProvider services)
         {
+            IEnumerable<ConsumerMetaT1> eble;
             var container = services.GetService<IServiceCollection>();
             if (container is not null)
             {
-                throw new NotImplementedException();
+                var metas = new List<ConsumerMetaT1>();
+                eble = metas;
+                foreach (var item in container)
+                {
+                    var actualType = item.ImplementationType;
+                    if (item.Lifetime == ServiceLifetime.Singleton && actualType is not null)
+                    {
+                        var ifaces = actualType.GetInterfaces();
+                        foreach (var iface in ifaces)
+                        {
+                            if (iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IConsumerAsync<>))
+                            {
+                                var eType = iface.GetGenericArguments()[0];
+                                metas.Add(new(new(actualType, eType, iface), item.ServiceType));
+                            }
+                        }
+                    }
+                }
             }
             else
             {
                 var metas = GetConsumerMetas(services);
-                var pairs = GetPairs(metas, services);
-                var result = new EventsMap(metas, pairs);
-                return result;
+                eble = metas;
             }
+            var pairs = GetPairs(eble, services);
+            var result = new EventsMap(eble, pairs);
+            return result;
         }
 
         public static ConsumerMetaT1[] GetConsumerMetas(IServiceProvider provider)
